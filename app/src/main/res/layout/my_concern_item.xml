@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ci_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/gender_zhuce_girl" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="K歌娱乐等你来玩~"
+                android:textColor="@color/font_333333"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/sex_imag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/selector_home_sex" />
+
+                <TextView
+                    android:id="@+id/tv_userid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:background="@null"
+                    android:text="ID：00123"
+                    android:textColor="@color/font_999999"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.noober.background.view.BLTextView
+            android:id="@+id/btn_ok"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="关注"
+            android:textColor="@color/font_ff3e6d"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:bl_corners_radius="13dp"
+            app:bl_stroke_color="@color/font_ff3e6d"
+            app:bl_stroke_width="1dp" />
+
+        <com.noober.background.view.BLTextView
+            android:id="@+id/btn_no_ok"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="已关注"
+            android:textColor="@color/font_999999"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:bl_corners_radius="13dp"
+            app:bl_stroke_color="@color/font_999999"
+            app:bl_stroke_width="1dp" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/font_line" />
+</RelativeLayout>

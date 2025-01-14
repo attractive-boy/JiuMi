@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="false"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:background="@mipmap/two_guild" />
+    <!--<LinearLayout-->
+        <!--android:gravity="center"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginBottom="50dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<ImageView-->
+            <!--android:id="@+id/imgLogin"-->
+            <!--android:src="@mipmap/zhuce_guild"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imgRegister"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:src="@mipmap/denglu_guild"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+    <!--</LinearLayout>-->
+    <TextView
+        android:id="@+id/imgRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/yindao_shape"
+        android:paddingLeft="60dp"
+        android:paddingTop="18dp"
+        android:paddingRight="60dp"
+        android:paddingBottom="18dp"
+        android:text="进入啾咪"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/label_text_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginBottom="2dp"
+    android:background="@drawable/bule_lable_item_shape"
+    android:gravity="center"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:textColor="@color/white"
+    android:textSize="10sp">
+
+</TextView>

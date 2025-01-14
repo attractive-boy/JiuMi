@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--<com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+    <!--android:id="@+id/refreshLayout"-->
+    <!--app:srlAccentColor="@color/font_333333"-->
+    <!--app:srlPrimaryColor="@color/font_eeeeee"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.miniapp.talks.view.MyListView
+                android:id="@+id/myList1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@color/white"
+                android:dividerHeight="10dp" />
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/home_hot"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:text="热门推荐"
+                    android:textColor="@color/font_333333"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <!--<ImageView-->
+                <!--android:src="@mipmap/home_tuijian_gengduo"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+            </LinearLayout>
+
+            <com.miniapp.talks.view.MyListView
+                android:id="@+id/myList2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@color/white"
+                android:dividerHeight="10dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/home_miliao"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:text="密聊推荐"
+                    android:textColor="@color/font_333333"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <!--<ImageView-->
+                <!--android:src="@mipmap/home_tuijian_gengduo"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+            </LinearLayout>
+
+            <com.miniapp.talks.view.MyListView
+                android:id="@+id/myList3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:divider="@color/white"
+                android:dividerHeight="10dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll3"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/home_weixingge"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:text="C位推荐"
+                    android:textColor="@color/font_333333"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textGirl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="女生"
+                    android:textColor="@drawable/selector_boy_text"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/textBoy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="男生"
+                    android:textColor="@drawable/selector_boy_text"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/imgFresh"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:src="@mipmap/home_weixingge_shuaxin" />
+            </LinearLayout>
+
+            <com.miniapp.talks.view.MyGridView
+                android:id="@+id/myGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"
+                android:background="@color/white"
+                android:horizontalSpacing="20dp"
+                android:numColumns="2"
+                android:scrollbars="none"
+                android:verticalSpacing="20dp" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--</com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+
+</LinearLayout>

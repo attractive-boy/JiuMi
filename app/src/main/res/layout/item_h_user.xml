@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/llBg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/item_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/room_kazuo_kong"
+                    app:riv_border_width="1dip"
+                    app:riv_corner_radius="180dip" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imgBg"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@color/font_83000000"
+                    app:riv_border_color="@color/font_83000000"
+                    app:riv_border_width="0dip"
+                    app:riv_corner_radius="180dip" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="11dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-8dp"
+                android:background="@mipmap/room_xuhao_weizhi"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:maxWidth="30dp"
+                android:minWidth="16dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="主持"
+                android:textColor="@color/white"
+                android:textSize="9sp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

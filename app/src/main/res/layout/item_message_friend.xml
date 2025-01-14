@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <ImageView
+            android:id="@+id/ci_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/gender_zhuce_girl" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="K歌娱乐等你来玩~"
+                android:textColor="@color/font_333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_userid"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="ID：00123"
+                android:textColor="@color/font_999999"
+                android:drawableLeft="@drawable/selector_home_sex"
+                android:drawablePadding="3dp"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/btn_ok"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="关注"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/font_ff3e6d"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/font_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</RelativeLayout>

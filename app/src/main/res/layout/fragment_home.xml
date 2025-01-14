@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/imgSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:padding="3dp"
+            android:src="@mipmap/home_l_phb"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/sousuo"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_toLeftOf="@+id/shoucang_room"
+            android:layout_toRightOf="@+id/imgSearch"
+            android:layout_weight="1"
+            android:background="@drawable/shape_gray"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/home_sousuo" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/shoucang_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:padding="3dp"
+            android:src="@mipmap/home_r_sc" />
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlAccentColor="@color/font_333333"
+        app:srlPrimaryColor="@color/font_eeeeee">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:minHeight="40dp"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        app:cardCornerRadius="7dp"
+                        app:cardElevation="0dp">
+
+                        <com.youth.banner.Banner
+                            android:id="@+id/banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:background="@drawable/shape_button_white"
+                            app:delay_time="2000"
+                            app:indicator_drawable_selected="@drawable/shape_wehite_yuan"
+                            app:indicator_height="7dp"
+                            app:indicator_margin="5dp"
+                            app:indicator_width="7dp"
+                            app:scroll_time="600" />
+                    </android.support.v7.widget.CardView>
+
+                    <com.flyco.tablayout.SlidingTabLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/card_banner"
+                        android:layout_centerInParent="true"
+                        android:background="@color/white"
+                        app:tl_indicator_color="@color/indectorcolor"
+                        app:tl_indicator_height="4dp"
+                        app:tl_indicator_margin_bottom="1dp"
+                        app:tl_indicator_width="30dp"
+                        app:tl_textBold="NONE"
+                        app:tl_textSelectColor="@color/black"
+                        app:tl_textUnselectColor="@color/textcolor"
+                        app:tl_textsize="16sp" />
+                </RelativeLayout>
+
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </android.support.design.widget.CoordinatorLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

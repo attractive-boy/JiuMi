@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="38dp"
+    android:layout_marginRight="38dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:drawableLeft="@mipmap/mizuan"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="米钻兑换"
+            android:textColor="@color/font_333333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/font_999999"
+            android:textSize="12sp"
+            tools:text="账户可兑换上限：88" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@mipmap/base_backgroud"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@mipmap/mibi"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="米币"
+                android:textColor="@color/font_333333"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/textBiNum"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="0"
+                android:maxLength="8"
+                android:inputType="number"
+                android:textColor="@color/font_333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@mipmap/base_backgroud"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@mipmap/mizuan"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="米钻"
+                android:textColor="@color/font_333333"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textZuanNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="88"
+                    android:textColor="@color/font_333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/textZuanNum"
+                    android:text="+"
+                    android:textColor="@color/font_333333"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/zeng_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/one"
+                    android:textColor="@drawable/selector_charge_text2"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <com.miniapp.talks.view.ShapeTextView
+            android:id="@+id/btn_ok"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="确认兑换"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:cornersRadius="50dp"
+            app:solidNormal="@color/font_ff3e6d" />
+
+        <TextView
+            android:id="@+id/textAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="全部兑换"
+            android:textColor="@color/font_ff3e6d"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

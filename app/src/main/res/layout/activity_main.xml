@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/frameLayout_main"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <RadioButton
+                    android:id="@+id/radio_home"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/selector_main_radiobuttion_home"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:text="首页"
+                    android:textColor="@drawable/selector_main_radiobutton_text"
+                    android:textSize="11sp"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <RadioButton
+                    android:visibility="gone"
+                    android:id="@+id/radio_finder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/selector_main_radiobuttion_finder"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:text="发现"
+                    android:textColor="@drawable/selector_main_radiobutton_text"
+                    android:textSize="11sp"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <RadioButton
+                    android:id="@+id/radio_shequ"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/selector_main_radiobuttion_coummunity"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:text="社区"
+                    android:textColor="@drawable/selector_main_radiobutton_text"
+                    android:textSize="11sp"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <RadioButton
+                    android:id="@+id/radio_message"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/selector_main_radiobuttion_message"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:text="消息"
+                    android:textColor="@drawable/selector_main_radiobutton_text"
+                    android:textSize="11sp"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <RadioButton
+                    android:id="@+id/radio_center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/selector_main_radiobuttion_center"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:text="我的"
+                    android:textColor="@drawable/selector_main_radiobutton_text"
+                    android:textSize="11sp"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+
+
+      <!--  <com.miniapp.talks.view.barry.BarrageView
+            android:id="@+id/barrageview"
+            android:layout_marginTop="150dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />-->
+
+        <com.orient.tea.barragephoto.ui.BarrageView
+            android:id="@+id/barrage"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.message.MessageSetActivity">
+
+    <include layout="@layout/include_title"/>
+
+    <LinearLayout
+        android:id="@+id/llTop"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:text="置顶聊天"
+            android:textSize="14sp"
+            android:textColor="@color/font_333333"
+            android:layout_marginLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/imgTop"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/selector_message_kai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:background="@color/font_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:text="关注"
+            android:textSize="14sp"
+            android:textColor="@color/font_333333"
+            android:layout_marginLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <com.miniapp.talks.view.ShapeTextView
+            android:id="@+id/btn_ok"
+            android:layout_width="55dp"
+            android:layout_marginRight="12dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="关注"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:cornersRadius="50dp"
+            app:solidNormal="@color/font_ff3e6d" />
+    </LinearLayout>
+
+    <View
+        android:background="@color/font_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:text="拉黑"
+        android:id="@+id/textHei"
+        android:textSize="14sp"
+        android:textColor="@color/font_333333"
+        android:paddingLeft="12dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <View
+        android:background="@color/font_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:text="举报"
+        android:textSize="14sp"
+        android:id="@+id/textReport"
+        android:textColor="@color/font_333333"
+        android:paddingLeft="12dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <View
+        android:background="@color/font_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</LinearLayout>

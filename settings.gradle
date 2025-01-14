@@ -1,0 +1,2 @@
+include ':app', ':arms', ':circleRecycler_library', ':CallKit', ':IMKit', ':IMLib', ':RCSticker'
+//include ':circleindicator'

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="-70dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_admin_home">
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="110dp"
+            android:layout_height="110dp">
+
+            <com.opensource.svgaplayer.SVGAImageView
+                android:id="@+id/imgQuan7"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+               />
+
+            <com.miniapp.talks.view.RippleView
+                android:id="@+id/wave_7"
+                style="@style/wave_style_center"
+                />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_centerInParent="true"
+                app:riv_corner_radius="180dip"
+                app:riv_border_width="1dip"
+                android:scaleType="fitXY"
+                app:riv_border_color="@color/font_89E0FB"
+                android:id="@+id/img7"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/user_header" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:id="@+id/img_txk_7"
+                    android:layout_width="102dp"
+                    android:layout_height="106dp"
+                    style="@style/txk_style"
+                    />
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="2.5dp"></View>
+            </LinearLayout>
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/imgVedio7"
+                android:layout_width="27dp"
+                android:layout_height="30dp"
+                android:layout_alignRight="@id/img7"
+                android:layout_alignBottom="@id/img7"
+                android:src="@drawable/selector_room_header_bimai" />
+
+            <TextView
+                android:id="@+id/textNum7"
+                android:layout_width="15dp"
+                android:layout_height="10dp"
+                android:text="7"
+                android:textSize="7sp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:background="@drawable/selector_room_number"
+                android:layout_alignBottom="@+id/img7"
+                android:textColor="@color/white" />
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/imgGif7"
+                android:scaleType="fitXY"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:id="@+id/text7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户AA"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

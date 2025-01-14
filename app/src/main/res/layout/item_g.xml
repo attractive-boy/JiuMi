@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/beijing"
+    android:layout_width="80dp"
+    android:layout_height="105dp"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingTop="10dp"
+    android:paddingRight="5dp">
+
+    <TextView
+        android:id="@+id/shuliang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="2dp"
+        android:textColor="@color/font_ff3e6d"
+        android:visibility="gone"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/item_img"
+        android:layout_width="44dp"
+        android:layout_height="43dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="center"
+        android:src="@mipmap/room_kazuo_kong" />
+
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="哈哈"
+        android:textColor="@color/white"
+        android:textSize="11sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="9dp"
+            android:src="@mipmap/room_gift_mizuan" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:text="哈哈"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </LinearLayout>
+</RelativeLayout>

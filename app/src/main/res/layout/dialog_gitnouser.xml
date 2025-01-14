@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:background="@mipmap/room_gift_bg"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/circleRecycler2"
+                android:background="#000"
+                android:layout_width="match_parent"
+                android:layout_height="160dp" />
+
+
+          <!--  <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/img"
+                android:src="@mipmap/guang"
+                android:scaleType="fitXY"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />-->
+
+            <com.opensource.svgaplayer.SVGAImageView
+                android:id="@+id/img_quan"
+                android:layout_centerHorizontal="true"
+                android:layout_height="80dp"
+                android:layout_width="80dp"
+                app:autoPlay="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="送给"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/imgSong"
+                android:layout_marginLeft="3dp"
+                android:src="@mipmap/room_kazuo_kong"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/textSongName"
+                tools:text="用户AA"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/shape_gitf1">
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="礼物"
+                        android:textSize="12sp"
+                        android:drawableLeft="@mipmap/room_gift_left"
+                        android:id="@+id/textPriceName"
+                        android:textColor="@color/font_ff3e6d"
+                        android:gravity="center"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:drawableRight="@mipmap/room_gift_right"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:id="@+id/textNum"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="x 1"
+                        android:textSize="12sp"
+                        android:textColor="@color/font_ff3e6d"
+                        android:gravity="center"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <com.miniapp.talks.view.ShapeTextView
+                    android:id="@+id/btn_ok"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="赠送"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:cornersRadius="180dp"
+                    app:solidNormal="@color/font_ff3e6d" />
+            </RelativeLayout>
+            <TextView
+                android:text="0"
+                android:drawableLeft="@mipmap/room_gift_mizuan"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:id="@+id/textPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.miniapp.talks.view.ShapeTextView
+                android:id="@+id/btn_chongzhi"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="充值"
+                android:layout_marginLeft="8dp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:cornersRadius="180dp"
+                app:solidNormal="@color/font_ff3e6d" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_input"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_height="40dp">
+
+            <EditText
+                android:id="@+id/et_num"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:inputType="number"
+                android:paddingRight="10dp"
+                android:layout_height="match_parent"
+                android:background="#fff"/>
+
+            <Button
+                android:id="@+id/btn_yes"
+                android:layout_width="wrap_content"
+                android:text="确定"
+                android:textColor="#fff"
+                android:background="@color/font_ff3e6d"
+                android:layout_height="40dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

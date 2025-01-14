@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:background="@drawable/shape_room_round"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="300dp"
+        android:layout_height="135dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <com.miniapp.talks.app.view.CircularImage
+                android:id="@+id/img1"
+                android:layout_width="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/no_tou" />
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/textName"
+                    android:text="用户"
+                    android:textColor="@color/font_333333"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/textId"
+                    tools:text="ID:xxxx"
+                    android:textColor="@color/font_999999"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:src="@drawable/selector_home_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textFenNumber"
+                        android:text="0"
+                        android:layout_marginLeft="3dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/font_999999"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="3dp"
+                        android:id="@+id/imgVip"
+                        android:src="@mipmap/huizhang"
+                        android:layout_width="33dp"
+                        android:layout_height="13dp" />
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="3dp"
+                        android:id="@+id/imgJinrui"
+                        android:src="@mipmap/huizhang"
+                        android:layout_width="33dp"
+                        android:layout_height="23dp" />
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="3dp"
+                        android:id="@+id/imgXingrui"
+                        android:src="@mipmap/huizhang"
+                        android:layout_width="33dp"
+                        android:layout_height="23dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgHome"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/user_card_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/imgJubao"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/user_card_jubao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:background="@color/font_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <LinearLayout
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <TextView
+                android:id="@+id/textDialogXiamai"
+                android:text="上麦"
+                android:textColor="@color/font_333333"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:drawableTop="@mipmap/user_card_xiamai"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/textDialogBimai"
+                android:text="闭麦"
+                android:textColor="@color/font_333333"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:drawableTop="@mipmap/user_card_bimai"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/textDialogJinyan"
+                android:text="禁言"
+                android:textColor="@color/font_333333"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:drawableTop="@mipmap/user_card_jinyan"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/textDialogTichu"
+                android:text="踢出房间"
+                android:textColor="@color/font_333333"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:drawableTop="@mipmap/user_card_tichu"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textDialogSongli"
+                android:text="送礼"
+                android:textColor="@color/font_ff3e6d"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp" />
+
+            <View
+                android:background="@color/font_line"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/textDialogGuanzhu"
+                android:text="关注"
+                android:textColor="@color/font_ff3e6d"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

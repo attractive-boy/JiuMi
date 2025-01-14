@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="10dp"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/ci_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/music_tianjia" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="爆灯哈哈哈啊"
+        android:textColor="@color/white"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bag_bg">
+
+        <android.support.v7.widget.Toolbar
+
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:id="@+id/toolbar_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/bag_back" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="我的背包"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:text="我的背包" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
+
+            <com.miniapp.talks.app.view.CircularImage
+                android:id="@+id/head_image"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@mipmap/no_tou"
+                app:layout_constraintBottom_toBottomOf="@id/head_image_kuang"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintLeft_toLeftOf="@id/head_image_kuang"
+                app:layout_constraintRight_toRightOf="@id/head_image_kuang"
+                app:layout_constraintTop_toTopOf="@id/head_image_kuang"
+                app:layout_constraintVertical_bias="0.52"
+                app:layout_constraintWidth_default="percent" />
+
+            <ImageView
+                android:id="@+id/head_image_kuang"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@mipmap/tou_15_16"
+                android:visibility="invisible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="-16dp"
+        android:background="@drawable/my_package_shape"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/box_gift"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="宝箱/礼物"
+            android:textColor="@drawable/selector_package_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/decorate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="装饰"
+            android:textColor="@drawable/selector_package_text"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_content_package"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

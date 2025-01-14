@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".activity.room.RoomSettingActivity">
+
+    <include layout="@layout/include_title"/>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@mipmap/base_backgroud"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:text="房间名称"
+                    android:textSize="14sp"
+                    android:textColor="@color/font_333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="*"
+                    android:textSize="14sp"
+                    android:textColor="@color/font_ff3e6d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.miniapp.talks.view.ClearEditText
+                    android:id="@+id/edt_login_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="4dp"
+                    android:background="@drawable/shape_f8f8f8"
+                    android:hint="请输入名称,做多输入8个字"
+                    android:maxLength="15"
+                    android:singleLine="true"
+                    android:textColor="@color/font_333333"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/font_line" />
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="房间类型"
+                    android:textSize="14sp"
+                    android:textColor="@color/font_333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="*"
+                    android:textSize="14sp"
+                    android:textColor="@color/font_ff3e6d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.miniapp.talks.view.MyGridView
+                    android:id="@+id/myGrid"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:layout_marginBottom="20dp"
+                    android:verticalSpacing="10dp" />
+
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/font_line" />
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:text="房间密码"
+                    android:textSize="14sp"
+                    android:textColor="@color/font_333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.miniapp.talks.view.ClearEditText
+                    android:id="@+id/edt_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="4dp"
+                    android:background="@drawable/shape_f8f8f8"
+                    android:hint="非必填，填写后，房间将会被上锁哦~"
+                    android:inputType="phone"
+                    android:textColor="@color/font_333333"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/font_line" />
+
+
+            <LinearLayout
+                android:id="@+id/llUser"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <TextView
+                    android:text="房间封面"
+                    android:textSize="14sp"
+                    android:textColor="@color/font_333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+               <View
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:layout_height="match_parent"/>
+
+                <ImageView
+                    android:id="@+id/imgUser"
+                    android:src="@drawable/selector_sex"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/home_tuijian_gengduo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/font_line" />
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="房间背景"
+                    android:textSize="14sp"
+                    android:textColor="@color/font_333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/font_line" />
+
+            <LinearLayout
+                android:id="@+id/llgao"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:text="房间公告"
+                    android:textSize="14sp"
+                    android:textColor="@color/font_333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/home_tuijian_gengduo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/font_line" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llzhaohu"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <TextView
+                    android:text="进房招呼语"
+                    android:textSize="14sp"
+                    android:textColor="@color/font_333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"/>
+
+                <ImageView
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/home_tuijian_gengduo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

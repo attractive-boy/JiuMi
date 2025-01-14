@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/more_label_popu_shpe"
+    android:orientation="vertical"
+    android:paddingLeft="14dp"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/san"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="添加标签"
+        android:textColor="@color/font_333333"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/more_label_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="28dp"
+        android:text="确定"
+        android:textColor="@color/font_999999"
+        android:textSize="14sp" />
+
+    <com.miniapp.talks.view.SearchView
+        android:id="@+id/more_label_SearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/more_label_sure"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/shape_gray"
+        app:searchBlockColor="@color/line"
+        app:searchBlockHeight="150"
+        app:textColorSearch="@color/font_999999"
+        app:textHintSearch="# 搜索标签"
+        app:textSizeSearch="5dp" />
+
+    <TextView
+        android:id="@+id/one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/more_label_SearchView"
+        android:layout_marginTop="26dp"
+        android:text="已选标签"
+        android:textColor="@color/font_333333"
+        android:textSize="13sp" />
+
+    <RelativeLayout
+        android:id="@+id/xiaobeijing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/one">
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/more_label_recycler_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp" />
+
+        <TextView
+            android:id="@+id/two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/more_label_recycler_one"
+            android:layout_marginTop="25dp"
+            android:text="推荐标签"
+            android:textColor="@color/font_333333"
+            android:textSize="13sp" />
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/more_label_recycler_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/two"
+            android:layout_marginTop="13dp"
+            android:paddingBottom="96dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/xiaobeijingtwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/one"
+        android:visibility="gone">
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/gridview_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="195dp" />
+
+        <TextView
+            android:id="@+id/no_label_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="165dp"
+            android:text="没有相关标签哦..."
+            android:textColor="@color/font_999999"
+            android:textSize="11sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

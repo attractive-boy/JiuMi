@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/include_title" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/denglu_logo" />
+
+
+    <com.miniapp.talks.view.ClearEditText
+        android:id="@+id/edt_login_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:background="@null"
+        android:hint="请输入您的手机号"
+        android:inputType="phone"
+        android:textColor="@color/font_333333"
+        android:textColorHint="@color/font_dddddd"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/oneline"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/line" />
+
+    <com.miniapp.talks.view.ClearEditText
+        android:id="@+id/edt_login_pass"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@null"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:textColor="@color/font_333333"
+        android:textColorHint="@color/font_dddddd"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/twoline"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/line" />
+
+
+    <com.miniapp.talks.view.ShapeTextView
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:cornersRadius="50dp"
+        app:bl_enabled_drawable="@color/font_ff3e6d"
+        app:bl_unEnabled_drawable="@color/color_FFCEDA"
+        app:solidNormal="@color/font_ff3e6d" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="40dp">
+
+        <TextView
+            android:id="@+id/textForget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="忘记密码"
+            android:textColor="@color/font_ff3e6d"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/textRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="立即注册"
+            android:textColor="@color/font_ff3e6d"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_horizontal"
+        android:text="快捷登录"
+        android:textColor="@color/font_999999"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/dsf_denglu_qq" />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/dsf_denglu_vx" />
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/dsf_denglu_wb" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/img4"-->
+        <!--android:layout_weight="1"-->
+        <!--android:src="@mipmap/dsf_denglu_zfb"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content" />-->
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="继续表示同意"
+            android:textColor="@color/font_999999"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/yonghu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:gravity="center"
+            android:text="《啾咪用户协议》"
+            android:textColor="@color/font_ff3e6d"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>
+

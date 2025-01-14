@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.ChangeUserActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:background="@mipmap/my_background_center">
+
+        <include layout="@layout/include_title" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="-85dp"
+        android:layout_marginRight="12dp">
+
+        <com.miniapp.talks.app.view.CircularImage
+            android:id="@+id/iv_head"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp"
+            android:src="@mipmap/gender_zhuce_girl" />
+
+        <TextView
+            android:id="@+id/tv_modifyname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="22dp"
+            android:layout_toRightOf="@id/iv_head"
+            android:text="用户名"
+            android:textColor="@color/textcentercolor"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_modifyname"
+            android:layout_width="24dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@id/tv_modifyname"
+            android:src="@mipmap/my_enter" />
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_modifyname"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@id/iv_head"
+            android:text="ID:00123"
+            android:textColor="@color/textcolor"
+            android:textSize="13sp" />
+
+
+        <com.miniapp.talks.view.ShapeTextView
+            android:id="@+id/iv_myhome"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="27dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="我的房间"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:cornersRadius="50dp"
+            app:solidNormal="@color/font_ff3e6d" />
+
+        <ImageView
+            android:id="@+id/iv_sex"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_below="@id/iv_head"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="9dp"
+            android:src="@mipmap/gender_girl" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_head"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/iv_sex"
+            android:text="18"
+            android:textColor="@color/font_666666"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_xingzuo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_head"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/tv_age"
+            android:text="狮子座"
+            android:textColor="@color/font_666666"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_addres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_head"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@id/tv_xingzuo"
+            android:text="上海"
+            android:textColor="@color/font_666666"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_addres"
+            android:layout_marginLeft="43dp"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textColor="@color/font_333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发布"
+                    android:textColor="@color/font_999999"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textColor="@color/font_333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关注"
+                    android:textColor="@color/font_999999"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textColor="@color/font_333333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="粉丝"
+                    android:textColor="@color/font_999999"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="12dp"
+
+            android:src="@mipmap/gender_girl" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="CP"
+            android:textColor="@color/font_333333"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginRight="12dp">
+
+        <com.miniapp.talks.app.view.CircularImage
+            android:id="@+id/iv_xiaoa"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp"
+            android:src="@mipmap/gender_zhuce_girl" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_xiaoa"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp"
+            android:text="小A"
+            android:textColor="@color/textcolor"
+            android:textSize="12sp" />
+
+
+        <com.miniapp.talks.app.view.CircularImage
+            android:id="@+id/iv_xiaob"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@+id/iv_xiaoa"
+            android:src="@mipmap/gender_zhuce_girl" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_xiaob"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/iv_xiaoa"
+            android:text="小B"
+            android:textColor="@color/textcolor"
+            android:textSize="12sp" />
+
+        <com.miniapp.talks.app.view.CircularImage
+            android:id="@+id/xindong"
+            android:layout_width="36dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:src="@mipmap/gender_zhuce_girl" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/xindong"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="23dp"
+            android:text="心动值78"
+            android:textColor="@color/xindongcolor"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp">
+
+        <com.miniapp.talks.app.view.CircularImage
+            android:id="@+id/iv_xiaoa2"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp"
+            android:src="@mipmap/gender_zhuce_girl" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_xiaoa2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp"
+            android:text="小A"
+            android:textColor="@color/textcolor"
+            android:textSize="12sp" />
+
+
+        <com.miniapp.talks.app.view.CircularImage
+            android:id="@+id/iv_xiaob2"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@+id/iv_xiaoa2"
+            android:src="@mipmap/gender_zhuce_girl" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_xiaob2"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/iv_xiaoa2"
+            android:text="小B"
+            android:textColor="@color/textcolor"
+            android:textSize="12sp" />
+
+        <com.miniapp.talks.app.view.CircularImage
+            android:id="@+id/xindong2"
+            android:layout_width="36dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:src="@mipmap/gender_zhuce_girl" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/xindong2"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="23dp"
+            android:text="心动值78"
+            android:textColor="@color/xindongcolor"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开启更多CP位"
+            android:layout_centerInParent="true"
+            android:textColor="@color/xindongcolor"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/gender_girl"
+            android:layout_marginTop="2dp"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="12dp"
+
+            android:src="@mipmap/gender_girl" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="荣誉"
+            android:textColor="@color/font_333333"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="12dp"
+
+            android:src="@mipmap/gender_girl" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="23dp"
+            android:layout_marginLeft="12dp"
+
+            android:src="@mipmap/gender_girl" />
+    </LinearLayout>
+
+
+</LinearLayout>

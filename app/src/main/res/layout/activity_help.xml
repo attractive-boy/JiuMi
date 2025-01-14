@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.HelpActivity">
+
+    <include layout="@layout/include_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/font_eeeeee" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="38dp"
+                android:text="问题描述"
+                android:textColor="@color/textcentercolor"
+                android:textSize="16sp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/help_fankui_shape">
+
+                <EditText
+                    android:id="@+id/et_question_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="请填写您遇到的问题或建议。。。"
+                    android:maxLength="300"
+                    android:paddingLeft="11dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="11dp"
+                    android:textColor="@color/font_333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginBottom="13dp"
+                    android:src="@mipmap/help_picture" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginBottom="13dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/num_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/font_dddddd"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/300"
+                        android:textColor="@color/font_dddddd"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.miniapp.talks.view.ShapeTextView
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:cornersRadius="50dp"
+                app:solidNormal="@color/font_ff3e6d" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="25dp"
+                android:text="联系我们"
+                android:textColor="@color/textcentercolor"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/help_fankui_shape"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="24dp">
+
+                    <ImageView
+                        android:id="@+id/iv_qqmobile"
+                        android:layout_width="18dp"
+                        android:layout_height="20dp"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/help_qq" />
+
+                    <TextView
+                        android:id="@+id/one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21dp"
+                        android:layout_toRightOf="@+id/iv_qqmobile"
+                        android:gravity="center_vertical"
+                        android:text="官方QQ："
+                        android:textColor="@color/textcentercolor"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/qqmobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/one"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/textcentercolor"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/qqfu"
+                        android:layout_width="35dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_toRightOf="@+id/qqmobile"
+                        android:background="@drawable/fankui_text_shape"
+                        android:gravity="center"
+                        android:text="复制"
+                        android:textColor="@color/font_999999"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="36dp">
+
+                    <ImageView
+                        android:id="@+id/iv_guanfanmobile"
+                        android:layout_width="18dp"
+                        android:layout_height="20dp"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/help_tel" />
+
+                    <TextView
+                        android:id="@+id/two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21dp"
+                        android:layout_toRightOf="@+id/iv_guanfanmobile"
+                        android:gravity="center_vertical"
+                        android:text="官方电话："
+                        android:textColor="@color/textcentercolor"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/guanfanmobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/two"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/textcentercolor"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/phonefu"
+                        android:layout_width="35dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_toRightOf="@+id/guanfanmobile"
+                        android:background="@drawable/fankui_text_shape"
+                        android:gravity="center"
+                        android:text="复制"
+                        android:textColor="@color/font_999999"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="36dp">
+
+                    <ImageView
+                        android:id="@+id/iv_guanfandy"
+                        android:layout_width="18dp"
+                        android:layout_height="20dp"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/help_guanfang" />
+
+                    <TextView
+                        android:id="@+id/three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21dp"
+                        android:layout_toRightOf="@+id/iv_guanfandy"
+                        android:gravity="center_vertical"
+                        android:text="官方订阅号："
+                        android:textColor="@color/textcentercolor"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/guanfandy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/three"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/textcentercolor"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/dingfu"
+                        android:layout_width="35dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="17dp"
+                        android:layout_toRightOf="@+id/guanfandy"
+                        android:background="@drawable/fankui_text_shape"
+                        android:gravity="center"
+                        android:text="复制"
+                        android:textColor="@color/font_999999"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

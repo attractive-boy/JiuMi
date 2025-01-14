@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.miniapp.talks">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- The Agora SDK requires Bluetooth permissions in case users are using Bluetooth devices. -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 控制呼吸灯，振动器等，用于新消息提醒 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- SDK 权限申明, 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 获取网络状态 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 网络通信 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 获取设备信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取MAC地址 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读写sdcard，storage等等 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 允许程序录制音频 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 和下面的 uses-permission 一起加入到你的 AndroidManifest 文件中。 -->
+    <permission
+        android:name="com.miniapp.talks.permission.RECEIVE_MSG"
+        android:protectionLevel="signature" /> <!-- 接收 SDK 消息广播权限， 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <uses-permission android:name="com.miniapp.talks.permission.RECEIVE_MSG" />
+
+    <application
+        android:name="com.jess.arms.base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/qidong"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/qidong"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.OnlineUserActivity"></activity>
+        <activity android:name=".activity.room.RoomRankActivity" />
+        <activity android:name=".activity.my.CPActivity" />
+        <activity android:name=".activity.my.MyPackageActivity" /> <!-- 可选 -->
+        <activity android:name="com.pgyersdk.feedback.FeedbackActivity" /> <!-- Jar 包集成的方式 必填 -->
+        <provider
+            android:name="com.pgyersdk.PgyerProvider"
+            android:authorities="${applicationId}.com.pgyer.provider"
+            android:exported="false" /> <!-- 必填 -->
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="" /> <!-- android:value="3df59a0a7a4ef74abe6cf2a44d978e09"></meta-data> -->
+        <!-- 百度统计//////开始///////////////////////////////////////// -->
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="" /> <!-- 百度统计渠道商编号 -->
+        <meta-data
+            android:name="BaiduMobAd_CHANNEL"
+            android:value="youmeng_channnel" /> <!-- 是否开启错误日志统计，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="false" /> <!-- 日志仅在wifi网络下发送，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_ONLY_WIFI"
+            android:value="false" /> <!-- 是否获取基站位置信息 ,默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_CELL_LOCATION"
+            android:value="true" /> <!-- 是否获取GPS位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_GPS_LOCATION"
+            android:value="true" /> <!-- 是否获取WIFI位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_WIFI_LOCATION"
+            android:value="true" /> <!-- 日志发送策略，可选值：APP_START、ONCE_A_DAY、SET_TIME_INTERVAL，默认为APP_START -->
+        <meta-data
+            android:name="BaiduMobAd_SEND_STRATEGY"
+            android:value="APP_START" /> <!-- 日志发送策略 为SET_TIME_INTERVAL时，需设定时间间隔。取值为1-24的整数，默认为1 -->
+        <meta-data
+            android:name="BaiduMobAd_TIME_INTERVAL"
+            android:value="1" /> <!-- 百度统计////////结束/////////////////////////////////////////////// -->
+        <activity
+            android:name=".activity.SearchDynamicActivity"
+            android:label="@string/text_relative_dynamic"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.my.DengJiShuoMingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SearchRoomActivity"
+            android:label="@string/text_relative_room"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SearchUserActivity"
+            android:label="@string/text_relative_user"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SearchResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SearchHisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.room.CollectionRoomListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.BingPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.BingCancelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.BindSuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.my.GradeCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.my.MemberCoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.my.MyFollowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.RealNameActivity"
+            android:label="@string/text_real_name_verify"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.WebRealNameActivity"
+            android:label="@string/text_real_name_verify"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.MyProfitActivity"
+            android:label="@string/text_my_money"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.CashMoneyActivity"
+            android:label="@string/text_withdraw"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AgreementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.my.BlackListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.ModifyPsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.my.ModifyDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.CashHisActivity"
+            android:label="@string/text_recorder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mine.MoneyActivity"
+            android:label="@string/text_my_wallet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.message.MessageOfficeActivity"
+            android:label="@string/text_government_msg"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.my.MyPersonalCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.message.ReportActivity"
+            android:label="@string/text_to_report"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.message.MessageSetActivity"
+            android:label="@string/text_chat_setting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.message.MessageActivity"
+            label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.miniapp.talks"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.dynamic.CommentDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.dynamic.MeZanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.dynamic.DynamicNewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.dynamic.DynamicDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChargeActivity"
+            android:label="@string/text_my_account" />
+        <activity
+            android:name=".activity.dynamic.TopicTrendsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.room.MyMusciActivity"
+            android:label="@string/text_local_music"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.room.MusicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.dynamic.HeatTopicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.room.SetAdminActivity"
+            android:label="@string/text_set_admin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.dynamic.SocialReleaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".activity.room.RankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EditGaoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SetActivity"
+            android:label="@string/text_setting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.room.RoomSettingActivity"
+            android:label="@string/text_setting_room"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activity.HelpActivity"
+            android:label="@string/text_help_feedback"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".base.BaseWebActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangeUserActivity"
+            android:label="@string/text_modify_info"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.room.AdminHomeActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.UserMineStateActivity"
+            android:label="@string/text_user_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.UploadActivity"
+            android:label="@string/text_complete_info"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activity.login.SexActivity"
+            android:label="@string/text_choice_sex"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".activity.login.RegisterActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".activity.login.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.login.ForgetPsActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/wx_theme" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:label=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.miniapp.talks"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!--
+         只要依赖 AutoSize 就必须填写设计图尺寸, 否则报错,
+        不想使用 AutoSize 就不要依赖 AutoSize 只要填写完设计图的尺寸,
+        AutoSize 就会自动启动, 以下 dp 尺寸是根据公式 px / (dpi / 160) 求出,
+        运算时使用测试机的 dpi 即可,
+        AndroidAutoSize 的详细介绍请看这里 https://juejin.im/post/5bce688e6fb9a05cf715d1c2
+        -->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="667" /> <!-- arms配置 -->
+        <meta-data
+            android:name="com.miniapp.talks.app.GlobalConfiguration"
+            android:value="ConfigModule" />
+
+        <activity
+            android:name=".activity.LunchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LunchStyle"></activity>
+        <activity
+            android:name=".activity.GuildActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.zlw.main.recorderlib.recorder.RecordService" />
+
+        <receiver android:name=".activity.dynamic.SocialReleaseActivity$MyReceiver">
+            <intent-filter>
+                <action android:name="SendNotify" />
+                <action android:name="play_recorder_complete" />
+            </intent-filter>
+        </receiver> <!-- 分享的配置 -->
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent101813872" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- 友盟 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5db7a7270cafb2f90f00103f" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="u100" />
+
+        <service android:name=".app.service.RoomPlayService" /> <!-- ///////////////////沉浸式相关////////////////// -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" /> <!-- 适配华为（huawei）刘海屏 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+    </application>
+
+</manifest>

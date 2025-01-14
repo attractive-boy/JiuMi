@@ -1,0 +1,238 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+//apply plugin: 'mtj-circle-plugin'
+android {
+    namespace "com.miniapp.talks"
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    useLibrary 'org.apache.http.legacy'
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.miniapp.talks"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+        multiDexEnabled true
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', "x86_64"
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+//        manifestPlaceholders = [
+//                JSHARE_PKGNAME : applicationId,
+//                JPUSH_APPKEY : "4ef62af707f9dc7baa34dad3", //极光控制台创建应用得到的AppKey.
+//                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+//                TENCENT_APPID: "QQ开发者应用的appID",//腾讯开放平台注册应用得到的appId
+//        ]
+    }
+
+    signingConfigs {
+
+        debug {
+            storeFile file("../xinxinbaby.jks")
+            storePassword "qazseppp"
+            keyAlias "xinxinbaby"
+            keyPassword "qazseppp"
+        }
+
+        release {
+            storeFile file("../xinxinbaby.jks")
+            storePassword "qazseppp"
+            keyAlias "xinxinbaby"
+            keyPassword "qazseppp"
+        }
+
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("String", "API_HOST", "\"http://192.168.11.221:8066\"")
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    repositories { flatDir { dirs 'libs' } }
+
+    //打包提示GC
+    dexOptions {
+//        incremental true
+        javaMaxHeapSize "4g"
+    }
+
+//    //百度统计
+//    MtjCirclePluginConfig {
+//        // 设置appkey
+//        appkey = 'Pquq1NHw9FEvNGKFxopErVpeN9QuQDqf'
+//        // 设置debug 开关，如果需要查看日志则打开开关，为避免影响性能建议上线前关闭（设置为false）
+//        debug = true
+//        // 默认启动此插件，如果开发者不需要可以禁用（设置为false）
+//        enabled = true
+//    }
+}
+//百度统计
+//MtjCirclePluginConfig {
+//    // 设置appkey
+//    appkey = 'Pquq1NHw9FEvNGKFxopErVpeN9QuQDqf'
+//    // 设置debug 开关，如果需要查看日志则打开开关，为避免影响性能建议上线前关闭（设置为false）
+//    debug = true
+//    // 默认启动此插件，如果开发者不需要可以禁用（设置为false）
+//    enabled = true
+//
+//}
+
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+
+    //support
+    implementation rootProject.ext.dependencies["cardview-v7"]
+
+    //arms
+    implementation project(':arms')
+
+    //    ---------------------- 以下是扩展库 ----------------------
+
+    //想使用 Glide 请依赖 arms-imageloader-glide 扩展库, 使用方式请看 #4.1
+    implementation 'me.jessyan:arms-imageloader-glide:2.5.0'
+
+    //想使用 AndroidAutoLayout 请依赖 arms-autolayout 扩展库, 使用方式请查看 #4.2
+    implementation 'me.jessyan:arms-autolayout:2.5.0'
+
+    //注意 Arms 核心库现在并不会依赖某个 EventBus, 要想使用 EventBus, 还请在项目中自行依赖对应的 EventBus
+
+    //    implementation rootProject.ext.dependencies["androideventbus"]
+    implementation rootProject.ext.dependencies["eventbus"]
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    implementation rootProject.ext.dependencies["progressmanager"]
+    implementation rootProject.ext.dependencies["retrofit-url-manager"]
+    implementation rootProject.ext.dependencies["lifecyclemodel"]
+    implementation rootProject.ext.dependencies["retrofit-converter-gson"]
+
+    //view
+    annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
+        exclude module: 'support-annotations'
+    }
+    implementation rootProject.ext.dependencies["paginate"]
+
+    //test
+    testImplementation rootProject.ext.dependencies["junit"]
+    debugImplementation rootProject.ext.dependencies["canary-debug"]
+    releaseImplementation rootProject.ext.dependencies["canary-release"]
+    testImplementation rootProject.ext.dependencies["canary-release"]
+
+    //三方库
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.alibaba:fastjson:1.2.44'
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'com.jcodecraeer:xrecyclerview:1.5.9'
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    api('com.cysion:ImagePicker:1.0.6') {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+    implementation 'com.lzy.widget:view-core:0.2.1'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47'
+    implementation 'org.litepal.android:java:3.0.0'
+    implementation 'com.github.gittjy:LoadingDialog:1.0.2'
+    api 'com.just.agentweb:agentweb:4.0.3-beta'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+
+    //    implementation files('libs/alipaySdk-20180601.jar')
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+
+    //QMUI
+    implementation 'com.qmuiteam:qmui:1.2.0'
+
+    //录音
+    implementation 'com.github.zhaolewei:ZlwAudioRecorder:1.0.6'
+
+    //PhotoView
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+
+    //音频播放
+    implementation 'com.lzx:StarrySkyJava:2.1.9'
+
+    //轮播图点
+    implementation 'me.relex:circleindicator:1.3.2'
+
+    //点赞效果
+    implementation 'com.ldoublem.thumbUplib:ThumbUplib:0.5'
+
+    //滚动的列表
+    implementation project(':circleRecycler_library')
+    implementation 'com.github.yyued:SVGAPlayer-Android:2.4.6'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //微信支付
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    implementation project(':IMKit')
+    implementation project(':RCSticker')
+    implementation project(':IMLib')
+
+    //友盟
+    implementation 'com.umeng.sdk:common:latest.integration'
+    implementation 'com.umeng.sdk:analytics:latest.integration'
+
+    //PushSDK必须依赖utdid库，所以需要加入对应依赖
+    implementation 'com.umeng.umsdk:utdid:1.1.5.3'
+
+    //PushSDK
+    implementation 'com.umeng.umsdk:push:6.0.1'
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation 'com.kongzue.dialog_v3:dialog:3.1.1'
+
+    //指示器
+    implementation 'com.github.hackware1993:MagicIndicator:1.6.0'
+
+    implementation 'com.jieWang:Muti-Barrage:1.0.7'
+
+    //百度统计,手动埋点
+    implementation 'com.baidu.mobstat:mtj-sdk:latest.integration'
+
+    //沉浸式
+    // 基础依赖包，必须要依赖
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+// fragment快速实现（可选）
+    implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0'
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/gift_image"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gift_image"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/gift_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/font_999999"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/wu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/gift_name"
+            android:layout_toRightOf="@id/gift_name"
+            android:text="*"
+            android:textColor="@color/font_999999"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/gift_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/gift_name"
+            android:layout_toRightOf="@id/wu"
+            android:textColor="@color/font_999999"
+            android:textSize="11sp" />
+    </RelativeLayout>
+</RelativeLayout>

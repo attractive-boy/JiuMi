@@ -1,0 +1,7 @@
+POST http://b.juchuyuncang.com/api/room_recommend_room
+Content-Type: application/x-www-form-urlencoded
+token:2b368b2b-e912-434d-94c9-7192eeefd2b5
+
+categories=4&page=1
+
+###

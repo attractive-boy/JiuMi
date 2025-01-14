@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="mini" />
+
+    <version value="3" />
+
+    <list>
+        <mapping class="com.miniapp.talks.bean.LoginData" />
+        <mapping class="com.miniapp.talks.bean.LocalMusicInfo" />
+
+    </list>
+    <storage value="internal" />
+</litepal>

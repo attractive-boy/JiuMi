@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/quanbu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_back"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/box_first_text_tit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="宝箱兑换 "
+        android:textColor="@color/font_333333"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="3dp"
+            android:layout_height="12dp"
+            android:background="@color/color_FFD736" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:text="我的积分："
+            android:textColor="@color/font_333333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/box_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:textColor="@color/font_333333"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp">
+
+        <ImageView
+            android:id="@+id/box_left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:src="@mipmap/room_bxdh_l" />
+
+        <ImageView
+            android:id="@+id/box_right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="17dp"
+            android:src="@mipmap/room_bxdh_r" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/box_goods"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_toLeftOf="@id/box_right_btn"
+            android:layout_toRightOf="@id/box_left_btn"
+            android:clipChildren="false" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="19dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="兑换消耗："
+            android:textColor="@color/font_ff3e6d"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/box_need_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2000"
+            android:textColor="@color/font_ff3e6d"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <com.miniapp.talks.view.ShapeTextView
+        android:id="@+id/ok_btn"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="18dp"
+        android:text="兑换"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:cornersRadius="15dp"
+        app:solidNormal="@color/font_ff3e6d" />
+</LinearLayout>

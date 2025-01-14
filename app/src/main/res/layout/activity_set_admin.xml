@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".activity.room.RankActivity">
+
+    <include layout="@layout/include_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.miniapp.talks.view.ClearEditText
+            android:id="@+id/edt_login_pass"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_gray_bg_boild"
+            android:hint="输入用户id"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/font_333333"
+            android:textSize="14sp" />
+
+        <com.miniapp.talks.view.ShapeTextView
+            android:id="@+id/btn_ok"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:cornersRadius="10dp"
+            app:solidNormal="@color/font_ff3e6d" />
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="管理员 2/12"
+                    android:textStyle="bold"
+                    android:textColor="@color/font_333333"
+                    android:textSize="14sp" />
+
+                <com.miniapp.talks.view.MyListView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/myList1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:divider="@color/font_line"
+                    android:dividerHeight="1dp" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="房间在线3人"
+                    android:textStyle="bold"
+                    android:textColor="@color/font_333333"
+                    android:textSize="14sp" />
+
+                <com.miniapp.talks.view.MyListView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/myList2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_home_round"
+                    android:divider="@color/font_line"
+                    android:dividerHeight="1dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.miniapp.talks.view.MyListView
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:id="@+id/myList3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:divider="@color/font_line"
+            android:dividerHeight="1dp" />
+    </RelativeLayout>
+
+</LinearLayout>

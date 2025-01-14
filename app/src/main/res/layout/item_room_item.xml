@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/item_layout_user"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.miniapp.talks.app.view.CircularImage
+            android:id="@+id/img_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="23dp"
+
+            android:src="@mipmap/default_home"
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/img_head"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="28dp"
+            >
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_14"
+                android:textColor="@color/font_333333"
+                android:text="用户名"
+                />
+            <TextView
+                android:id="@+id/tv_user_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_user_name"
+                android:layout_marginTop="7dp"
+                android:textSize="@dimen/txt_size_12"
+                android:textColor="@color/font_999999"
+                android:text="123333"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/txt_size_14"
+                android:textColor="@color/font_333333"
+                android:text="123333"
+                />
+
+            <com.miniapp.talks.view.ShapeTextView
+                android:id="@+id/shape_tv_mic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="上麦"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_13"
+                app:cornersRadius="180dp"
+                app:solidNormal="@color/font_ff3e6d" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/font_eeeeee"
+        ></View>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="line">#eeeeee</color>
+    <color name="font_333333">#333333</color>
+    <color name="translant">#00000000</color>
+
+    <color name="font_6882fd">#6882fd</color>
+    <color name="font_ff3e6d">#ff3e6d</color>
+    <color name="font_999999">#999999</color>
+    <color name="font_eeeeee">#eeeeee</color>
+    <color name="touming">#00000000</color>
+
+
+    <color name="color_fed42b">#FED42B</color>
+    <color name="color_trans_b3000">#b3000000</color>
+    <color name="color_ffde00">#ffde00</color>
+    <!--others-->
+    <color name="xindongcolor">#FF3E70</color>
+    <color name="buttoncolor">#FF3E6D</color>
+    <color name="textcolor">#999999</color>
+    <color name="countcolor">#FF3E6D</color>
+    <color name="textcentercolor">#333333</color>
+    <color name="indectorcolor">#FF3E6D</color>
+    <color name="black">#000000</color>
+    <color name="font_dddddd">#dddddd</color>
+    <color name="font_f3f6f8">#f3f6f8</color>
+    <color name="font_666666">#666666</color>
+    <color name="font_line">#eeeeee</color>
+    <color name="font_f8f8f8">#f8f8f8</color>
+    <color name="font_75adff">#75ADFF</color>
+    <color name="font_ff8e75">#FF8E75</color>
+    <color name="admin_bg">#A76FEE</color>
+    <color name="font_89E0FB">#89E0FB</color>
+    <color name="font_FD96AE">#FD96AE</color>
+    <color name="transparent_80_333333">#33333333</color>
+    <color name="font_E7BA6F">#E7BA6F</color>
+    <color name="colorMainBlue">#89B3E6</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="font_4d000000">#4d000000</color>
+    <color name="color_21D1FD">#21D1FD</color>
+    <color name="color_0F91DC">#0F91DC</color>
+    <color name="coloe_666666">#666666</color>
+    <color name="cplor_42B6FF">#42B6FF</color>
+    <color name="red">#FF0000</color>
+    <color name="gray">#A9A9A9</color>
+    <color name="font_83000000">#83000000</color>
+    <color name="startse">#FED09F</color>
+    <color name="endse">#FEA7AF</color>
+    <color name="yellow_light">#FEEA3A</color>
+    <color name="red_red">#F34235</color>
+    <color name="bulue_46A6FD">#46A6FD</color>
+    <color name="bulue_41D4FD">#41D4FD</color>
+    <color name="color_CBE5FF">#CBE5FF</color>
+    <color name="color_FF003E">#FF003E</color>
+    <color name="color_FFCC41">#FFCC41</color>
+    <color name="color_FFCEDA">#FFCEDA</color>
+    <color name="color_F9F9F9">#F9F9F9</color>
+    <color name="color_bantouming">#80000000</color>
+    <color name="color_B400CE">#B400CE</color>
+    <color name="color_FFBA1C">#FFBA1C</color>
+    <color name="color_FFD862">#FFD862</color>
+    <color name="color_FFDD55">#FFDD55</color>
+    <color name="color_FFD736">#FFD736</color>
+    <color name="color_6A83FF"> #6A83FF</color>
+    <color name="color_FBA8DC">#FBA8DC</color>
+    <color name="color_A4E8FE"> #A4E8FE</color>
+    <color name="color_AFD2FE">#AFD2FE</color>
+    <color name="color_8CE0FC">#8CE0FC</color>
+    <color name="color_FD88A7">#FD88A7</color>
+    <color name="color_FB2544">#FB2544</color>
+    <color name="color_daa1e1">#daa1e1</color>
+    <color name="color_D092DD">#D092DD</color>
+    <color name="color_FFDC17">#FFDC17</color>
+    <color name="color_70toumingdubai">#4DFFFFFF</color>
+</resources>

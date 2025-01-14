@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name" translatable="false">啾咪</string>
+    <string name="agora_app_id" translatable="false">0b48c2c2ee5c4fd9910234af6c78fd9c</string>
+    <string name="agora_app_id_test" translatable="false">b3bbbd8c41ad4a6bb9db0313ee2c5334</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="item_position" translatable="false">中间位置</string>
+    <string name="text_relative_dynamic" translatable="false">相关动态</string>
+    <string name="text_relative_room" translatable="false">相关房间</string>
+    <string name="text_relative_user" translatable="false">相关用户</string>
+    <string name="text_real_name_verify" translatable="false">实名认证</string>
+    <string name="text_my_money" translatable="false">我的收益</string>
+    <string name="text_withdraw" translatable="false">提现</string>
+    <string name="text_recorder" translatable="false">记录</string>
+    <string name="text_my_wallet" translatable="false">我的钱包</string>
+    <string name="text_government_msg" translatable="false">官方消息</string>
+    <string name="text_to_report" translatable="false">举报</string>
+    <string name="text_chat_setting" translatable="false">聊天设置</string>
+    <string name="text_my_account" translatable="false">我的账户</string>
+    <string name="text_local_music" translatable="false">本地音乐</string>
+    <string name="text_set_admin" translatable="false">设置管理员</string>
+    <string name="text_setting" translatable="false">设置</string>
+    <string name="text_setting_room" translatable="false">房间设置</string>
+    <string name="text_help_feedback" translatable="false">帮助与反馈</string>
+    <string name="text_modify_info" translatable="false">修改资料</string>
+    <string name="text_user_name" translatable="false">用户名</string>
+    <string name="text_complete_info" translatable="false">完善资料</string>
+    <string name="text_choice_sex" translatable="false">选择性别</string>
+</resources>

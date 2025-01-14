@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/font_f3f6f8"
+        android:id="@+id/take_photo"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拍照" />
+
+
+    </LinearLayout>
+    <View
+        android:background="@color/font_dddddd"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:id="@+id/chose_pic"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@color/font_f3f6f8"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="从手机选择"/>
+
+    </LinearLayout>
+    <View
+        android:background="@color/font_dddddd"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:background="@color/font_f3f6f8"
+        android:id="@+id/dismiss_pop"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+       >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

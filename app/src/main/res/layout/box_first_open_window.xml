@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="33dp"
+    android:layout_marginRight="33dp"
+    android:background="@drawable/dialog_back"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/box_first_text_tit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="恭喜首开宝箱500积分，掉落\n扩展卡，已发放至我的—背包中哦！ "
+        android:textColor="@color/font_333333"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/box_first_image"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="50dp"
+        android:src="@mipmap/room_bx_kzk" />
+
+    <com.miniapp.talks.view.ShapeTextView
+        android:id="@+id/ok_btn"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="21dp"
+        android:text="知道了"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:cornersRadius="15dp"
+        app:solidNormal="@color/font_ff3e6d" />
+</LinearLayout>

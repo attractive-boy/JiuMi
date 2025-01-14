@@ -1,0 +1,180 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="Transparent" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>　　　　　　
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <style name="myChooseDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+    </style>
+
+    <style name="myTouMingDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.0</item>
+    </style>
+
+    <style name="NoTitleBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!--Tablayout字体大小-->
+    <style name="TabLayoutTextStyle" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!--Tablayout字体大小-->
+    <style name="TabLayoutTextStyle2" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--Tablayout字体大小-->
+    <style name="TabLayoutTextStyle3" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--Tablayout字体大小-->
+    <style name="TabLayoutTextStyle4" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <!--TabLayout字体大小-->
+    <style name="TablayoutTextStyle5" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <!-- <style name="AnimationActivity" parent="@android:style/Animation.Activity" mce_bogus="1">
+         <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+         <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+         <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+         <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+     </style>-->
+
+    <style name="popwin_anim_style" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_anim</item>
+    </style>
+
+    <!--弹窗动画 上下-->
+    <style name="pop_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
+    </style>
+
+    <!--  看大图-->
+    <style name="big_pic_dialog" parent="Theme.AppCompat.Dialog">
+        <!--设置背景颜色-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--控制全屏-->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!--设置是否显示"遮罩"层-->
+        <item name="android:backgroundDimEnabled">true</item>
+
+    </style>
+
+    <style name="MyDialog" parent="android:Theme.Dialog">
+        <!-- 背景颜色及透明程度 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 是否没有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否背景模糊 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 设置背景模糊的透明度-->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+
+    <style name="wx_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">-->
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/translant</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ProgressBar_Scale" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/progressbar_bg_shape</item>
+    </style>
+
+    <style name="LunchStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <declare-styleable name="MaxHeightLayout">
+        <attr name="mhv_HeightRatio" format="reference|float" />
+        <attr name="mhv_HeightDimen" format="reference|dimension" />
+    </declare-styleable>
+
+    <style name="txk_style">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">66dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <style name="wave_style">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:layout_centerInParent">true</item>
+        <!--<item name="VoiceRippleView_rippleColor">@color/color_fed42b</item>-->
+        <!--<item name="VoiceRippleView_rippleRadius">30</item>-->
+        <!--<item name="VoiceRippleView_iconSize">30</item>-->
+        <!--<item name="wave_width">20</item>-->
+        <!--<item name="wave_coreImageRadius">50</item>-->
+    </style>
+
+    <style name="wave_style_center">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:layout_centerInParent">true</item>
+        <!--<item name="VoiceRippleView_rippleColor">@color/color_fed42b</item>-->
+        <!--<item name="VoiceRippleView_rippleRadius">120</item>-->
+        <!--<item name="VoiceRippleView_iconSize">100</item>-->
+        <!--<item name="wave_width">20</item>-->
+        <!--<item name="wave_coreImageRadius">50</item>-->
+    </style>
+</resources>

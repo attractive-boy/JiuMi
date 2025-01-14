@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.mine.BingCancelActivity"
+    tools:ignore="MissingPrefix">
+
+    <include layout="@layout/include_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <com.miniapp.talks.app.view.CircularImage
+        android:id="@+id/head_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="21dp"
+        android:src="@mipmap/ic_launcher_app" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="11dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付宝账户："
+            android:textColor="@color/coloe_666666"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="给大哥点烟"
+            android:textColor="@color/font_333333"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="42dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号:"
+            android:textColor="@color/font_333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/phone_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:text="11111111111"
+            android:textColor="@color/font_333333"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="33dp"
+        android:background="@color/line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginRight="32dp">
+
+        <TextView
+            android:id="@+id/coad_tit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="验证码："
+            android:textColor="@color/font_333333"
+            android:textSize="13sp" />
+
+        <com.miniapp.talks.view.ShapeTextView
+            android:id="@+id/coad_btn"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="发送验证码"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            app:cornersRadius="15dp"
+            app:solidNormal="@color/buttoncolor" />
+
+        <EditText
+            android:id="@+id/coad_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/coad_btn"
+            android:layout_toRightOf="@id/coad_tit"
+            android:background="@null"
+            android:paddingLeft="35dp"
+            android:textColor="@color/font_333333"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginRight="33dp"
+        android:background="@color/line" />
+
+    <Button
+        android:id="@+id/surebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginRight="40dp"
+        android:background="@null"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:bl_corners_radius="23dp"
+        app:bl_enabled_drawable="@color/buttoncolor"
+        app:bl_unEnabled_drawable="@color/color_FFCEDA" />
+</LinearLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_baoxiao"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_black_radius_gemstone">
+
+    <TextView
+        android:id="@+id/tv_gemstone_integral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/shape_yellow_border"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/color_fed42b"
+        android:textSize="@dimen/txt_size_12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_winning_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="13dp"
+        android:src="@mipmap/icon_stone_time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_gemstone_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="13dp"
+        android:src="@mipmap/icon_stone_what"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_winning_record" />
+
+    <ImageView
+        android:id="@+id/img_gemstone_exchange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="13dp"
+        android:src="@mipmap/icon_stone_switch_intro"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_gemstone_intro" />
+
+    <RelativeLayout
+        android:id="@+id/layout_key_count"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="15dp"
+        android:background="@mipmap/icon_key_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_gemstone_integral">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:src="@mipmap/icon_open_key" />
+
+        <TextView
+            android:id="@+id/tv_key_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/color_fed42b"
+            android:textSize="@dimen/txt_size_13" />
+
+        <ImageView
+            android:id="@+id/img_add_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_stone_add" />
+
+    </RelativeLayout>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/img_gemstone_logo"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="13dp"-->
+        <!--android:src="@mipmap/img_gemstone"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/layout_key_count" />-->
+
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/img_svg_open"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="13dp"
+        android:background="@color/translant"
+        android:scaleType="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_key_count" />
+
+
+    <ImageView
+        android:id="@+id/img_ten_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/icon_open_ten"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_svg_open" />
+
+    <ImageView
+        android:id="@+id/img_open_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/icon_open_one"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/img_ten_open"
+        app:layout_constraintTop_toBottomOf="@id/img_svg_open" />
+
+    <ImageView
+        android:id="@+id/img_open_hundred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/icon_open_hundred"
+        app:layout_constraintLeft_toRightOf="@id/img_ten_open"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_svg_open" />
+
+    <TextView
+        android:id="@+id/tv_cut_down_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@mipmap/icon_cut_down_stone"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:text="守护宝箱开启还有3:00分钟"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_size_11"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_ten_open" />
+
+    <View
+        android:id="@+id/view_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_cut_down_time"></View>
+
+
+</android.support.constraint.ConstraintLayout>

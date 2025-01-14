@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/translant"
+    android:orientation="vertical"
+    tools:context=".fragment.RoomRankFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_bj"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/room_rank_ri"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
+            android:background="@drawable/selector_rank"
+            android:gravity="center"
+            android:text="日榜"
+            android:textColor="@color/panghang_text_selector"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/room_rank_zhou"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/selector_rank"
+            android:gravity="center"
+            android:text="周榜"
+            android:textColor="@color/panghang_text_selector"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/room_rank_yue"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/selector_rank"
+            android:gravity="center"
+            android:text="月榜"
+            android:textColor="@color/panghang_text_selector"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="36dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/tou2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp">
+
+                <com.miniapp.talks.app.view.CircularImage
+                    android:id="@+id/img2"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
+                    app:layout_constraintBottom_toBottomOf="@id/head_image_kuang2"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintLeft_toLeftOf="@id/head_image_kuang2"
+                    app:layout_constraintRight_toRightOf="@id/head_image_kuang2"
+                    app:layout_constraintTop_toTopOf="@id/head_image_kuang2"
+                    app:layout_constraintVertical_bias="0.49"
+                    app:layout_constraintWidth_default="percent" />
+
+                <ImageView
+                    android:id="@+id/head_image_kuang2"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@mipmap/room_phb_two"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/room_rank_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tou2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/room_rank_id2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/room_rank_name2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/font_999999"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/room_rank_id2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/room_rank_zuan_tit2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/room_rank_zuan2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFBA1C"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1">
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:src="@mipmap/home_phb_guang" />-->
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/tou1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <com.miniapp.talks.app.view.CircularImage
+                    android:id="@+id/img1"
+                    android:layout_width="51dp"
+                    android:layout_height="51dp"
+                    app:layout_constraintBottom_toBottomOf="@id/head_image_kuang"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintLeft_toLeftOf="@id/head_image_kuang"
+                    app:layout_constraintRight_toRightOf="@id/head_image_kuang"
+                    app:layout_constraintTop_toTopOf="@id/head_image_kuang"
+                    app:layout_constraintVertical_bias="0.45"
+                    app:layout_constraintWidth_default="percent" />
+
+                <ImageView
+                    android:id="@+id/head_image_kuang"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:src="@mipmap/room_phb_one"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/room_rank_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tou1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/room_rank_id1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/room_rank_name1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/font_999999"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/room_rank_id1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/room_rank_zuan_tit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/room_rank_zuan1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFBA1C"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/tou3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp">
+
+                <com.miniapp.talks.app.view.CircularImage
+                    android:id="@+id/img3"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    app:layout_constraintBottom_toBottomOf="@id/head_image_kuang3"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintLeft_toLeftOf="@id/head_image_kuang3"
+                    app:layout_constraintRight_toRightOf="@id/head_image_kuang3"
+                    app:layout_constraintTop_toTopOf="@id/head_image_kuang3"
+                    app:layout_constraintVertical_bias="0.48"
+                    app:layout_constraintWidth_default="percent" />
+
+                <ImageView
+                    android:id="@+id/head_image_kuang3"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@mipmap/room_phb_three"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/room_rank_name3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tou3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/room_rank_id3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/room_rank_name3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/font_999999"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/room_rank_id3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/room_rank_zuan_tit3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/room_rank_zuan3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFBA1C"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/room_rank_rv_shape">
+
+        <LinearLayout
+            android:id="@+id/no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:src="@mipmap/room_phb_kong" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="暂无数据~"
+                android:textColor="@color/font_999999"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/room_rank_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+    </RelativeLayout>
+</LinearLayout>

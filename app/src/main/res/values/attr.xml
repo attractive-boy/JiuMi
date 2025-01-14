@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShapeTextView">
+        <attr name="shape" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="oval" value="1" />
+        </attr>
+        <attr name="solidNormal" format="color" />
+        <attr name="solidPressed" format="color" />
+        <attr name="cornersRadius" format="dimension" />
+        <attr name="cornerTopLeft" format="dimension" />
+        <attr name="cornerTopRight" format="dimension" />
+        <attr name="cornerBottomLeft" format="dimension" />
+        <attr name="cornerBottomRight" format="dimension" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="strokeColor" format="color" />
+        <attr name="gradientNormalStartColor" format="color" />
+        <attr name="gradientNormalCenterColor" format="color" />
+        <attr name="gradientNormalEndColor" format="color" />
+
+        <attr name="gradientPressedStartColor" format="color" />
+        <attr name="gradientPressedCenterColor" format="color" />
+        <attr name="gradientPressedEndColor" format="color" />
+
+        <attr name="gradientOrientation" format="enum">
+            <enum name="TOP_BOTTOM" value="0" />
+            <enum name="TR_BL" value="1" />
+            <enum name="RIGHT_LEFT" value="2" />
+            <enum name="BR_TL" value="3" />
+            <enum name="BOTTOM_TOP" value="4" />
+            <enum name="BL_TR" value="5" />
+            <enum name="LEFT_RIGHT" value="6" />
+            <enum name="TL_BR" value="7" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Search_View">
+        <attr name="textSizeSearch" format="dimension"  />
+        <attr name="textColorSearch" format="color" />
+        <attr name="textHintSearch" format="string" />
+        <attr name="searchBlockHeight" format="integer" />
+        <attr name="searchBlockColor" format="color" />
+    </declare-styleable>
+
+    <!--扩散圆颜色-->
+    <attr name="diffuse_color" format="color"/>
+    <!--中心圆颜色-->
+    <attr name="diffuse_coreColor" format="color"/>
+    <!--中心圆图片-->
+    <attr name="diffuse_coreImage" format="reference"/>
+    <!--中心圆半径-->
+    <attr name="diffuse_coreRadius" format="float"/>
+    <!--扩散圆宽度,值越小越宽-->
+    <attr name="diffuse_width" format="integer"/>
+    <!--最大扩散宽度-->
+    <attr name="diffuse_maxWidth" format="integer"/>
+    <!--扩散速度，值越大越快-->
+    <attr name="diffuse_speed" format="integer"/>
+
+    <declare-styleable name="DiffuseView">
+        <attr name="diffuse_color"/>
+        <attr name="diffuse_coreColor"/>
+        <attr name="diffuse_coreImage"/>
+        <attr name="diffuse_coreRadius"/>
+        <attr name="diffuse_width"/>
+        <attr name="diffuse_maxWidth"/>
+        <attr name="diffuse_speed"/>
+    </declare-styleable>
+
+    <declare-styleable name="circle_progress_image_attrs">
+        <attr name="play_image" format="reference"/>
+        <attr name="stop_image" format="reference"/>
+        <attr name="end_image" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="WaveView">
+        <!--圆颜色-->
+        <attr name="wave_color" format="color"/>
+        <!--中心圆图片半径-->
+        <attr name="wave_coreImageRadius" format="integer"/>
+        <!--波浪圆之间间距,值越小越窄-->
+        <attr name="wave_width" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="VoiceRippleView">
+        <attr name="VoiceRippleView_rippleColor" format="color"/>
+        <attr name="VoiceRippleView_rippleRadius" format="integer"/>
+        <attr name="VoiceRippleView_iconSize" format="integer" />
+    </declare-styleable>
+
+    <!--涟漪控件属性-->
+    <declare-styleable name="mRippleView">
+        <attr name="cColor" format="color"/>
+        <attr name="cSpeed" format="integer"/>
+        <attr name="cDensity" format="integer"/>
+        <attr name="cIsFill" format="boolean"/>
+        <attr name="cIsAlpha" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="pwdEditText">
+        <attr name="space" format="dimension"/>
+        <attr name="strokeWidths" format="dimension"/>
+        <attr name="checkedColor" format="color"/>
+        <attr name="defaultColor" format="color"/>
+        <attr name="textLength" format="integer"/>
+        <attr name="backColor" format="color"/>
+        <attr name="textColor" format="color"/>
+        <attr name="circle" format="dimension"/>
+        <attr name="round" format="dimension"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="isPwd" format="boolean"/>
+        <attr name="waitInputColor" format="color"/>
+        <attr name="isWaitInput" format="boolean"/>
+    </declare-styleable>
+
+</resources>

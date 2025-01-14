@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.my.GradeCenterActivity">
+
+    <include layout="@layout/include_title" />
+
+    <com.miniapp.talks.app.view.CircularImage
+        android:id="@+id/head_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="21dp" />
+
+    <TextView
+        android:id="@+id/nack_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/font_333333"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="12dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:id="@+id/one"
+                android:layout_width="3dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/color_FFCC41" />
+
+            <TextView
+                android:id="@+id/textone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/one"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="金锐等级"
+                android:textColor="@color/font_333333"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/now_image"
+                android:layout_width="49dp"
+                android:layout_height="19dp"
+                android:layout_below="@id/textone"
+                android:layout_alignLeft="@id/one"
+                android:layout_marginTop="22dp"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/next_image"
+                android:layout_width="49dp"
+                android:layout_height="19dp"
+                android:layout_below="@id/textone"
+                android:layout_alignTop="@id/now_image"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="27dp"
+                android:scaleType="centerCrop" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@style/ProgressBar_Scale"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/textone"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/next_image"
+                android:layout_toRightOf="@id/now_image" />
+
+            <TextView
+                android:id="@+id/jinrui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progress_bar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="18dp"
+                android:textColor="@color/font_999999"
+                android:textSize="11sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="12dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp">
+
+            <TextView
+                android:id="@+id/two"
+                android:layout_width="3dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/color_FFCC41" />
+
+            <TextView
+                android:id="@+id/texttwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/two"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="星锐等级"
+                android:textColor="@color/font_333333"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/xingrui_now_image"
+                android:layout_width="49dp"
+                android:layout_height="19dp"
+                android:layout_below="@id/texttwo"
+                android:layout_alignLeft="@id/two"
+                android:layout_marginTop="22dp"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/xingrui_next_image"
+                android:layout_width="49dp"
+                android:layout_height="19dp"
+                android:layout_below="@id/texttwo"
+                android:layout_alignTop="@id/xingrui_now_image"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="27dp"
+                android:scaleType="centerCrop" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar2"
+                style="@style/ProgressBar_Scale"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/texttwo"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/xingrui_next_image"
+                android:layout_toRightOf="@id/xingrui_now_image" />
+
+            <TextView
+                android:id="@+id/xingrui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progress_bar2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="18dp"
+                android:textColor="@color/font_999999"
+                android:textSize="11sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

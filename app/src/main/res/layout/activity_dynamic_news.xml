@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.dynamic.DynamicNewsActivity">
+
+    <include layout="@layout/include_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <LinearLayout
+            android:id="@+id/official_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/gf_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_frame_shape"
+                android:drawableLeft="@mipmap/news_top_logo"
+                android:drawablePadding="17dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="22dp"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:text="社区活动"
+                android:textColor="@color/coloe_666666"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shadow_frame_shape"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/me_zan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/news_top_zan"
+                        android:drawablePadding="17dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="11dp"
+                        android:paddingBottom="11dp"
+                        android:text="我赞过的动态"
+                        android:textColor="@color/coloe_666666"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/shequ_gengduo" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/me_pl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/news_top_pinglun"
+                        android:drawablePadding="17dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="11dp"
+                        android:paddingBottom="11dp"
+                        android:text="我评论过的动态"
+                        android:textColor="@color/coloe_666666"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/shequ_gengduo" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/me_sc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/news_top_shoucang"
+                        android:drawablePadding="17dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="11dp"
+                        android:paddingBottom="11dp"
+                        android:text="我收藏的动态"
+                        android:textColor="@color/coloe_666666"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/shequ_gengduo" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="17dp"
+                android:text="互动消息"
+                android:textColor="@color/font_333333"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_frame_shape"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/interaction_zan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp">
+
+                    <TextView
+                        android:id="@+id/have_zan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/news_hudong_zan"
+                        android:drawablePadding="17dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="11dp"
+                        android:paddingBottom="11dp"
+                        android:text="有 77 人赞了您的动态"
+                        android:textColor="@color/coloe_666666"
+                        android:textSize="14sp" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/interaction_sc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp">
+
+                    <TextView
+                        android:id="@+id/have_sc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/news_hudong_sc"
+                        android:drawablePadding="17dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="11dp"
+                        android:paddingBottom="11dp"
+                        android:text="有 77 人收藏了您的动态"
+                        android:textColor="@color/coloe_666666"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/line" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/interaction_fx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp">
+
+                    <TextView
+                        android:id="@+id/have_fx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/news_hudong_fx"
+                        android:drawablePadding="17dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="11dp"
+                        android:paddingBottom="11dp"
+                        android:text="有 77 人分享了您的动态"
+                        android:textColor="@color/coloe_666666"
+                        android:textSize="14sp" />cccccccccccccc
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mylist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
